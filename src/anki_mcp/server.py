@@ -1,5 +1,5 @@
 import mcp.server.stdio
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 
 from anki_mcp.tools.get_collection_overview import get_collection_overview
 from anki_mcp.tools.add_or_update_notes import add_or_update_notes
@@ -9,7 +9,7 @@ from anki_mcp.tools.find_cards import find_cards
 from anki_mcp.tools.suspend_cards import suspend_cards, unsuspend_cards
 from anki_mcp.resources.search_syntax import get_search_syntax_docs
 
-app = FastMCP("anki")
+app = MCPServer("anki")
 
 # Register tools with the app
 app.tool(
